@@ -759,6 +759,11 @@ body {
   color: #2d476d;
 }
 
+.info-card__email {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 .up-to-button {
   position: fixed;
   bottom: 20px;
@@ -797,8 +802,8 @@ body {
 
 .header__contacts {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 27.125rem;
-          flex: 0 1 27.125rem;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .contacts {
@@ -817,6 +822,9 @@ body {
   -webkit-text-decoration: none solid rgb(255, 255, 255);
           text-decoration: none solid rgb(255, 255, 255);
   word-spacing: 0px;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contacts > a {
@@ -829,6 +837,26 @@ body {
   -webkit-column-gap: 0.3125rem;
      -moz-column-gap: 0.3125rem;
           column-gap: 0.3125rem;
+}
+
+.contacts__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.contacts__phone-icon {
+  width: 20px;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
 }
 
 .contacts__mail::before {
@@ -1460,9 +1488,6 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 39.4375rem;
           flex: 0 1 39.4375rem;
-  min-height: 33.75rem;
-  max-width: 39.4375rem;
-  width: 100%;
 }
 
 .info-contacts {
@@ -1527,6 +1552,22 @@ body {
   text-align: left;
   word-spacing: 0px;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.info-contacts__phone-icon {
+  width: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
 }
 
 .info-contacts__address {
@@ -1546,6 +1587,19 @@ body {
   text-align: left;
   word-spacing: 0px;
   color: #000;
+}
+
+.map-contacts {
+  height: 33.75rem;
+  max-width: 39.4375rem;
+  width: 100%;
+}
+
+.map-contacts__image {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page__offer {
@@ -2337,11 +2391,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
   min-height: 29.4375rem;
 }
 
 .services-map__image {
-  max-width: 35.625rem;
   height: 29.4375rem;
   display: block;
   -o-object-fit: cover;
@@ -2631,6 +2686,10 @@ body {
 
   .about-services__text {
     text-align: justify;
+  }
+
+  .services-map__body {
+    max-width: none;
   }
 }
 
